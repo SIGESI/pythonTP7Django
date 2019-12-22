@@ -2,15 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTMLview</title>
+    <title>Bienvenu</title>
+    <style>
+
+    .mainDiv {
+        background-color:#CFE8E9;
+        height: 100%;
+    }
+
+    .formDiv {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .formDiv input {
+        width: 200px;
+        height: 30px;
+    }
+
+    .textDiv {
+        margin-top: 30px;
+    }
+
+    .textDiv input {
+        width: 200px;
+        height: 30px;
+    }
+
+    .buttonDiv {
+        margin-top: 30px;
+    }
+
+    .buttonDiv input {
+        width: 100px;
+        height: 40px;
+        margin-left: 40px;
+    }
+
+    </style>
 </head>
 <body>
-    <h1 style="...">Bienvenu</h1>
-    <form action="/index/" method="post">
-        <input type="text" name="username">
-        <input type="password" name="password">
-        <input type="submit" value="Ok">
-    </form>
+    <div class="mainDiv">
+        <div style="margin-top: 90px; ">
+
+            <h1 style="...">Bienvenu</h1>
+            <div class="formDiv">
+                <form action="/index/" method="post">
+                    <div class="textDiv">
+                        <span style="width: 300px; margin-right: 66px;">User: </span>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="textDiv">
+                        <span style="width: 300px; margin-right: 20px;">password: </span>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="buttonDiv">
+                        <input type="submit" value="Ok"/>
+                        <input type="button" value="Annuler"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <h1 style="...">user list</h1>
     <table border="1">

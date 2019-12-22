@@ -6,8 +6,6 @@ user_list=[
     {"user":"song","pwd":"123"},
     {"user":"jiu","pwd":"456"},
 ]
-
-
 def index(request):
     #return HttpResponse("Hello song, welcome to django")
     if request.method == "POST":
@@ -19,6 +17,6 @@ def index(request):
         #temp={"user":username,"pwd":password}
         #user_list.append(temp)
         '''MTV'''
-        models.UserInfo.objects.create(user=username,pwd=password) #ajouter donnes a bdd
-        user_list=models.UserInfo.objects.all()
+        models.UserInfo.objects.create(user=username, pwd=password) #ajouter donnes a bdd
+    user_list=models.UserInfo.objects.all()
     return  render(request, "index.html", {"data":user_list}) #Package html
